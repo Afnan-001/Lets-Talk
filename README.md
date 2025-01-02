@@ -1,16 +1,5 @@
-# login_page
+# WeTalk
 
-A new Flutter project.
+WeTalk is a group chat app designed for effortless communication and collaboration. Whether you're chatting with friends, coordinating with teams, or staying connected with loved ones, WeTalk provides a seamless experience with real-time messaging, media sharing, and customizable groups. 
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## NOTE:- The app is still in development...
