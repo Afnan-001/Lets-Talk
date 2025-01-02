@@ -4,12 +4,12 @@ import 'package:login_page/services/auth_service.dart';
 // Services
 
 // Widgets
-import '../widgets/button.dart';
-import '../widgets/textfield.dart';
+import '../../widgets/button.dart';
+import '../../widgets/textfield.dart';
 
 //Pages
-import './signup_screen.dart';
-import '../pages/home_screen.dart';
+import 'signup_screen.dart';
+import '../home_screen.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -23,6 +23,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   final _email = TextEditingController();
   final _password = TextEditingController();
+  final String emailError = "Email is required";
+  final String passwordError = "Password is required";
 
   @override
   void dispose() {
@@ -40,7 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
           children: [
             const Spacer(),
             const Text("Login",
-                style: TextStyle(fontSize: 40, fontWeight: FontWeight.w500, color: Colors.white)),
+                style: TextStyle(
+                    fontSize: 40,
+                    fontWeight: FontWeight.w500,
+                    color: Colors.white)),
             const SizedBox(height: 50),
             CustomTextField(
               hint: "Enter Email",
@@ -61,11 +66,14 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             const SizedBox(height: 8),
             Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-              const Text("Don't have an account? ",style: TextStyle(color: Colors.white),),
+              const Text(
+                "Don't have an account? ",
+                style: TextStyle(color: Colors.white),
+              ),
               InkWell(
                 onTap: () => goToSignup(context),
-                child:
-                    const Text("Signup", style: TextStyle(color: Color.fromARGB(255, 255, 0, 0))),
+                child: const Text("Signup",
+                    style: TextStyle(color: Color.fromARGB(255, 255, 0, 0))),
               )
             ]),
             const Spacer()
@@ -86,6 +94,7 @@ class _LoginScreenState extends State<LoginScreen> {
       );
 
   _login() async {
+    
     final user =
         await _auth.loginUserWithEmailAndPassword(_email.text, _password.text);
 

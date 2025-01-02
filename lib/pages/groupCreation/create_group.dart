@@ -16,20 +16,24 @@ class _CreateGroupPageState extends State<CreateGroupPage> {
   String? groupDescriptionError;
 
   void validateAndNavigate() {
-    setState(() {
-      groupNameError = groupNameController.text.isEmpty ? "Group Name is required" : null;
-      groupDescriptionError = groupDescriptionController.text.isEmpty ? "Group Description is required" : null;
-    });
+  setState(() {
+    groupNameError = groupNameController.text.isEmpty ? "Group Name is required" : null;
+    groupDescriptionError = groupDescriptionController.text.isEmpty ? "Group Description is required" : null;
+  });
 
-    if (groupNameError == null && groupDescriptionError == null) {
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const AddUsersPage(),
+  if (groupNameError == null && groupDescriptionError == null) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => AddUsersPage(
+          groupName: groupNameController.text,
+          groupDescription: groupDescriptionController.text,
         ),
-      );
-    }
+      ),
+    );
   }
+}
+
 
   @override
   Widget build(BuildContext context) {

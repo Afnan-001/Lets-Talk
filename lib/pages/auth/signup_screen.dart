@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:login_page/services/auth_service.dart';
 
 //Widgets
-import '../widgets/textfield.dart';
-import '../widgets/button.dart';
+import '../../widgets/textfield.dart';
+import '../../widgets/button.dart';
 
 //Pages
-import './login_screen.dart';
-import './home_screen.dart';
+import 'login_screen.dart';
+import '../home_screen.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});

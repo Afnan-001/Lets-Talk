@@ -4,7 +4,7 @@ import 'package:login_page/fetch_data/fetch_info.dart';
 import 'package:login_page/fetch_data/update_info.dart';
 
 // Pages
-import 'package:login_page/pages/login_screen.dart';
+import 'package:login_page/pages/auth/login_screen.dart';
 import 'package:login_page/pages/profile/reset_password.dart';
 import 'package:login_page/widgets/button.dart';
 
